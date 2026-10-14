@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Clinica Dental Cerro Alto</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="contenedor">
+  <div class="cabecera">
+    <div class="logo">CLINICA DENTAL CERRO ALTO</div>
+    <div class="menu">INICIO | SERVICIOS | SEDES | NOSOTROS | CONTACTO</div>
+  </div>
+
+  <div class="banner">
+    <div class="banner-texto">TU SONRISA ES NUESTRA PRIORIDAD!!!</div>
+    <div class="banner-sub">Mas de 15 años cuidando la salud dental de las familias quiteñas con la mejor tecnologia y los mejores profesionales del pais</div>
+  </div>
+
+  <div class="columnas">
+    <div class="col-izq">
+      <div class="titulo">Contactenos</div>
+      <p class="texto">Llene el siguiente formulario y nos pondremos en contacto.</p>
+
+      <form id="formulario">
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="telefono" placeholder="Telefono">
+        <input type="text" id="correo" placeholder="Email">
+        <input type="text" id="ciudad" placeholder="Ciudad">
+        <select id="servicio">
+          <option>Seleccione...</option>
+          <option>Blanqueamiento</option>
+          <option>Combo limpieza + blanqueamiento</option>
+          <option>Limpieza</option>
+          <option>Valoración</option>
+          <option>Ortodoncia</option>
+          <option>Alineadores</option>
+          <option>Otro</option>
+        </select>
+        <textarea id="mensaje" placeholder="Mensaje"></textarea>
+        <div class="boton" onclick="enviar()">ENVIAR</div>
+      </form>
+    </div>
+
+    <div class="col-der">
+      <div class="titulo">Nuestras sedes</div>
+      <p class="texto"><b>Sede Norte:</b> Av. Las Retamas N38-150 y Calle Los Guabos, Quito. Lunes a viernes 8:00 a 19:00, sabados 8:00 a 13:00.</p>
+      <p class="texto"><b>Sede Valle:</b> C.C. Paseo Arrayanes, local 14, Via Interoceanica km 12, Cumbaya. Lunes a viernes 10:00 a 19:00, sabados 9:00 a 14:00.</p>
+      <p class="texto">Telefono: +593 2 000 4400</p>
+      <p class="texto">Aceptamos todas las tarjetas. Consulte por nuestras promociones vigentes en blanqueamiento y ortodoncia.</p>
+    </div>
+  </div>
+
+  <div class="pie">
+    Al enviar este formulario usted acepta los terminos y condiciones y la politica de tratamiento de datos de la clinica, la cual puede ser modificada sin previo aviso. La informacion proporcionada podra ser utilizada con fines comerciales y de contacto por la clinica y sus aliados. Copyright 2019 Clinica Dental Cerro Alto. Todos los derechos reservados.
+  </div>
+</div>
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
