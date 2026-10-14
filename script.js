@@ -8,14 +8,23 @@ function enviar() {
     message: document.getElementById("mensaje").value
   };
 
+  // Mismo formato que el conector de Meta, con platform "web" y sin campaña.
+  var evento = {
+    event_id: "evt_web_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 8),
+    event_type: "lead.created",
+    created_at: new Date().toISOString(),
+    source: { platform: "web", campaign: null, form_id: "frm_web_contacto" },
+    lead: lead
+  };
+
   if (WEBHOOK_URL) {
     fetch(WEBHOOK_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ event_type: "lead.created", source: { platform: "web" }, lead: lead })
+      body: JSON.stringify(evento)
     });
   } else {
-    console.log(lead);
+    console.log(evento);
   }
 
   alert("Enviado");
